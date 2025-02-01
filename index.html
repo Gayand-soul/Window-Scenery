@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fönster på bakgrund</title>
+    <style>
+        /* Kulturvisual delen */
+        .culture-visualpart {
+            position: absolute;
+            width: 100%;
+            height: 600px; /* Gör så att det fyller hela höjden på sidan */
+            overflow: hidden;
+            margin: 60px;
+        }
+
+        .culture-visual {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .culture-visual img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover; /* För att bilden ska fylla hela sektionen utan att förlora proportionerna */
+            border-top: 15px solid #000;
+            border-left: 20px solid #000; /* Vänster kant på bilden */
+            border-right: 20px solid #000; /* Höger kant på bilden */
+            border-bottom: 10px solid #000; /* Nedre kant på bilden */
+            box-sizing: border-box; /* Se till att border inte påverkar bildens dimensioner */
+
+        }
+
+        /* Fönstren ovanpå bilden */
+        .window {
+            position: absolute;
+            border: 20px solid#455b5e
+            ; /* Fönsterkanterna */
+            background: transparent; /* Genomskinlig bakgrund */
+            width: 20%; /* Storlek på fönster */
+            height: 90%; /* Storlek på fönster */
+            background-size: 100%;
+            background-position: center;
+            margin:0 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sea through window visual sektion ------------------------------> 
+    <section class="culture-visualpart">
+        <div class="culture-visual">
+            <picture>
+                <img src="../Glasswindow-with-view/SeaShore-2018.jpg" alt="Culture Image">
+            </picture>
+
+            <!-- Fönstren (divs med bakgrundsbild) -->
+            <div class="window" style="top: 10px; left: 30%;"></div>
+            <div class="window" style="top: 10px; left: 15%;"></div>
+            <div class="window" style="top: 10px; left: 5%;"></div>
+            <div class="window" style="top: 10px; left: 50%;"></div>
+            <div class="window" style="top: 10px; left: 55%;"></div>
+            <div class="window" style="top: 10px; left: 70%;"></div>
+        </div>
+    </section>
+
+</body>
+</html>
